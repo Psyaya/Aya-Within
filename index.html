@@ -1,67 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Aya-Within – Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="page">
-    <!-- NAVIGATION BAR -->
-    <header class="nav">
-      <div class="nav-left">
-        <a href="#">
-          <img src="images/nav-logo-medium.png" alt="Aya-Within logo" class="nav-logo" />
-        </a>
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Aya-Within – Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <!-- NAVIGATION BAR -->
+      <header class="nav">
+        <div class="nav-left">
+          <a href="#">
+            <img src="images/nav-logo-medium.png" alt="Aya-Within logo" class="nav-logo" />
+          </a>
+        </div>
 
-      <nav class="nav-right">
-        <a href="#">Home</a>
-        <a href="#offerings">Offerings</a>
-        <a href="#about">About</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <!-- HAMBURGER + LABEL (mobile) -->
-      <div class="hamburger-container">
-        <button class="hamburger" aria-label="Open Menu">
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-        </button>
-        <span class="menu-label">Open Menu</span>
-      </div>
-    </header>
+        <nav class="nav-right">
+          <a href="#">Home</a>
+          <a href="#offerings">Offerings</a>
+          <a href="#about">About</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <!-- HAMBURGER + LABEL (mobile) -->
+        <div class="hamburger-container">
+          <button class="hamburger" aria-label="Open Menu">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+          <span class="menu-label">Open Menu</span>
+        </div>
+      </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero hero-connected" id="home">
-      <div class="hero-inner">
-        <div class="hero-col-text">
-          <!-- Logo -->
-          <div class="hero-logo-circle">
-            <img src="images/logo-8cs.png" alt="Aya-Within 8Cs Logo" class="hero-logo-8cs" />
-          </div>
+      <!-- HERO SECTION -->
+      <section class="hero hero-connected" id="home">
+        <div class="hero-inner">
+          <div class="hero-col-text">
+            <!-- Logo -->
+            <div class="hero-logo-circle">
+              <img src="images/logo-8cs.png" alt="Aya-Within 8Cs Logo" class="hero-logo-8cs" />
+            </div>
 
-          <!-- Text + button group -->
-          <div class="hero-copy">
-            <h1 class="hero-heading">Welcome to All Your Parts</h1>
-            <p class="hero-subtitle">
-               Patience, Presence, Persistence, Playfulness, Perspective. <br>
-               Guiding you to reconnect with Self.
-            </p>
-            <button class="btn-primary">Book a Session</button>
+            <!-- Text + button group -->
+            <div class="hero-copy">
+              <h1 class="hero-heading">Welcome to All Your Parts</h1>
+              <p class="hero-subtitle">
+                Patience, Presence, Persistence, Playfulness, Perspective. <br>
+                Guiding you to reconnect with Self.
+              </p>
+              <button class="btn-primary">Book a Session</button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Future sections go here -->
+      <!-- Future sections go here -->
 
-  </div>
+      <!--- OFFERINGS SECTION -->
+      <section class="hero hero-connected" id="offerings">
+        <div class="hero-inner">
+          <div class="hero-col-text">
+            <!-- Logo -->
+            <div class="hero-logo-circle">
+              <img src="images/logo-8cs.png" alt="Aya-Within 8Cs Logo" class="hero-logo-8cs" />
+            </div>
 
-  <!-- Small script for hamburger behaviour -->
-  <script>
+            <!-- Text + button group -->
+            <div class="hero-copy">
+              <h1 class="hero-heading">My Offerings</h1>
+              <p>What do you want here?</p>
+              <p>You sure you want to repeat the small lotus icon here?</p>
+              <p>From Google Docs, I get the layout, but what is the content or placeholders?:</p>
+              <code>Section Placement:
+                Appears directly after the Homepage Hero section in scroll sequence.
+                Page Title:
+                "My Offerings"
+                Font: Playfair Display Semi-Bold
+                Color: #3B2A20
+                Centered
+                Small lotus icon centered above title (#3B2A20, 3-leaf version)
+                Background:
+                Solid cream #F4E6D1
+                Main Layout:
+                6 service items arranged as a grid (desktop: 2 rows × 3 columns)
+                Grid centered, equal spacing
+                Responsive Behavior:
+                Desktop: 2 rows × 3 columns
+                Medium screens / tablet: 3 rows × 2 columns (auto-adjust)
+                Mobile: 6 rows × 1 column (stacked)
+                Tiles adjust automatically based on viewport width
+                Grid Styling:
+                Soft outline on grid container: 1px solid #B78D6D
+                Rounded container corners: 16px
+                Internal dividers: 1px solid #B78D6D
+                Hover effect: soft shadow or glow in #C86F80
+                Optional shadow: rgba(0,0,0,0.05)
+                Generous vertical spacing above & below grid
+                Tile Styling:
+                Background: #F4E6D1
+                Text color: #3B2A20
+                Padding per tile: 28–34px
+                Rounded corners: 12–14px
+                Icons: small brown 3-leaf lotus icon above each title
+                Titles: Playfair Display Semi-Bold #3B2A20
+                Body text: Sans Serif #3B2A20
+                Arrow icon or subtle chevron bottom-right optional
+              </code>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Small script for hamburger behaviour -->
+    <!-- TODO(@ritchlee): does this actually work? -->
+    <script>
     const hamburger = document.querySelector('.hamburger');
     const navRight  = document.querySelector('.nav-right');
 
@@ -79,6 +135,6 @@
         });
       });
     }
-  </script>
-</body>
+    </script>
+  </body>
 </html>
