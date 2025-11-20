@@ -48,69 +48,55 @@ p {
   color: var(--browntext);
 }
 
-/* -------- Buttons -------- */
-.btn-primary {
+/* -------- Buttons - Bootstrap integration -------- */
+.btn-custom-green {
   display: inline-block;
-  background-color: var(--pink);
+  background-color: var(--green) !important;
   padding: 0.75rem 1.8rem;
   font-size: 1.05rem;
-  color: var(--cream);
+  color: var(--cream) !important;
   border-radius: 999px;
   text-decoration: none;
   transition: all 0.25s ease;
   border: none;
+  font-weight: 500;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.18);
 }
 
-.btn-primary:hover {
-  background-color: var(--green);
-  color: var(--cream);
+.btn-custom-green:hover {
+  background-color: var(--green) !important;
+  color: var(--cream) !important;
+  font-weight: 600;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.28);
   transform: translateY(-2px);
 }
 
-/* Base Button State */
+/* Compatibility with existing btn-primary--green class */
 .btn-primary--green {
-  background-color: var(--green);
-  color: var(--cream);
-  font-weight: 500;  /* normal */
+  background-color: var(--green) !important;
+  color: var(--cream) !important;
+  font-weight: 500;
   transition: all 0.25s ease;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.18);
 }
 
-/* Hover State */
 .btn-primary--green:hover {
-  background-color: var(--green);   /* stays green, no color shift */
-  font-weight: 600;                 /* slightly bolder text */
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.28);  /* deeper shadow for lift */
-  transform: translateY(-2px);
-}
-
-/* Soft shadow for Book a Session button */
-.btn-primary--green {
-  transition: box-shadow 0.3s ease;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.18);
-}
-
-/* Slightly stronger shadow on hover */
-.btn-primary--green:hover {
+  background-color: var(--green) !important;
+  font-weight: 600;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.22);
   transform: translateY(-2px);
 }
 
 /* =======================================
-   NAVIGATION
+   NAVIGATION - Bootstrap integration
 ======================================= */
 
-.nav {
-  height: 72px;
-  padding: 0 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.custom-nav {
   background-color: var(--cream);
   border-bottom: 1px solid var(--tan);
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1030;
 }
 
 .nav-logo {
@@ -118,82 +104,47 @@ p {
   width: auto;
 }
 
-.nav-right {
-  display: flex;
-  gap: 1.6rem;
-}
-
-.nav-right a {
+/* Bootstrap navbar links styling */
+.navbar-nav .nav-link {
+  color: var(--browntext) !important;
   text-decoration: none;
   font-size: 0.98rem;
-  color: var(--browntext);
+  position: relative;
+  padding: 0.5rem 0;
   transition: color 0.2s ease;
 }
 
-.nav-right a:hover {
-  color: var(--pink);
+.navbar-nav .nav-link:hover {
+  color: var(--pink) !important;
 }
 
-/* MOBILE NAV */
-.hamburger-container {
-  display: none;
-  flex-direction: column;
-  align-items: center;
+/* Bootstrap navbar toggler customization */
+.navbar-toggler {
+  border-color: var(--brown);
 }
 
-.hamburger {
-  display: none;
-  flex-direction: column;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(59, 42, 32, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.hamburger-bar {
-  width: 26px;
-  height: 3px;
-  background-color: var(--brown);
-  margin: 4px 0;
-  transition: all 0.3s ease;
-}
-
-.menu-label {
-  font-size: 0.75rem;
-  color: var(--brown);
-  margin-top: 4px;
-}
-
-/* Mobile menu open */
-.nav-right.open {
-  position: absolute;
-  top: 72px;
-  right: 0;
-  width: 100%;
-  background-color: var(--cream);
-  flex-direction: column;
-  padding: 1rem 0;
-  text-align: center;
-  border-bottom: 1px solid var(--tan);
-}
-
-.nav-right.open a {
-  padding: 0.75rem 0;
-}
-
-/* Hamburger visible <900px */
-@media (max-width: 900px) {
-  .nav-right {
-    display: none;
+/* Mobile navbar styling */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: var(--cream);
+    margin-top: 1rem;
+    padding: 1rem 0;
   }
 
-  .hamburger-container,
-  .hamburger {
-    display: flex;
+  .navbar-nav {
+    align-items: start !important;
   }
 
-  .nav-right.open {
-    display: flex;
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.75rem 0 !important;
   }
 }
 
@@ -262,11 +213,12 @@ p {
 }
 
 
-/* 3x2 grid with NO gaps – dividers are borders */
+/* Grid layout - Bootstrap integration with CSS Grid fallback */
 .offerings-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-auto-rows: 1fr;
+  /* Bootstrap classes handle the responsive grid */
+  /* display: grid; - removed, using Bootstrap's row/col system */
+  /* grid-template-columns: repeat(3, minmax(0, 1fr)); - removed */
+  /* grid-auto-rows: 1fr; - removed */
 }
 
 /* Every cell */
@@ -403,70 +355,56 @@ p {
 
 
 /* =======================================
-   RESPONSIVE FOR OFFERINGS GRID
+   RESPONSIVE FOR OFFERINGS GRID - Bootstrap integration
 ======================================= */
 
-@media (max-width: 1050px) {
-  /* keep top spacing similar to desktop */
+/* Tablet layout (Bootstrap md breakpoint) - 2 columns */
+@media (max-width: 991px) and (min-width: 768px) {
   .offerings-section {
     padding: 0.4rem 5vw 0.8rem;
   }
 
-  .offerings-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 across on tablets */
-  }
-
-  /* make sure every internal line is actually drawn */
   .offering-cell {
     padding: 1.8rem 1.6rem;
     border-right: 1px solid var(--tan) !important;
     border-bottom: 1px solid var(--tan) !important;
   }
 
-  /* remove right border only on the second column */
+  /* Remove right border on even columns (2nd column in 2-col layout) */
   .offering-cell:nth-child(2n) {
     border-right: none !important;
   }
 
-  /* remove bottom border only on the last row */
+  /* Remove bottom border on last row */
   .offering-cell:nth-child(5),
   .offering-cell:nth-child(6) {
     border-bottom: none !important;
   }
-  .offering-cell--cta {
-    background-color: var(--cream);   /* page background */
-    border-bottom: none !important;   /* no bottom line for CTA cell */
-    /* we KEEP border-right so the center vertical line stays visible */
-  }
 
+  .offering-cell--cta {
+    background-color: var(--cream);
+    border-bottom: none !important;
+  }
 }
 
-
-
-
-@media (max-width: 720px) {
+/* Mobile layout (Bootstrap sm and xs breakpoints) - 1 column */
+@media (max-width: 767px) {
   .offerings-section {
-    padding: 0.4rem 5vw 0.8rem;  /* (or whatever you currently use here) */
+    padding: 0.4rem 5vw 0.8rem;
   }
 
-  .offerings-grid {
-    grid-template-columns: 1fr;  /* stacked on mobile */
-  }
-
-  /* override the 1050px !important borders */
   .offering-cell {
     border-right: none !important;
     border-bottom: 1px solid var(--tan) !important;
   }
 
-  /* make the Book a Session cell float + move it to the end */
+  /* Move CTA cell to the end visually */
   .offering-cell--cta {
-    order: 6;                                   /* visually last */
-    background-color: var(--cream);            /* page background */
-    border-top: 1px solid var(--tan) !important;   /* line between “More Offerings” and CTA */
-    border-bottom: none !important;            /* open at very bottom */
+    order: 6;
+    background-color: var(--cream);
+    border-top: 1px solid var(--tan) !important;
+    border-bottom: none !important;
   }
-
 
   .offerings-title {
     font-size: 2rem;
@@ -475,6 +413,5 @@ p {
   .offering-cell p {
     max-width: none;
   }
-  
 }
 

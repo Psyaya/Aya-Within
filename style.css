@@ -20,19 +20,16 @@ body {
   color: var(--brown);
 }
 
-/* NAVBAR */
-.nav {
+/* NAVBAR - Bootstrap integration */
+.custom-nav {
   background-color: var(--beige);
-  padding: 1rem 6vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   border-bottom: 1px solid rgba(0,0,0,0.1);
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  position: relative;
-  z-index: 10;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
 }
 
 .nav-logo {
@@ -41,89 +38,62 @@ body {
   display: block;
 }
 
-/* desktop nav links */
-.nav-right {
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-right a {
-  color: var(--brown);
+/* Bootstrap navbar links styling */
+.navbar-nav .nav-link {
+  color: var(--brown) !important;
   text-decoration: none;
   font-size: 0.95rem;
   position: relative;
+  padding: 0.5rem 0;
 }
 
-.nav-right a:hover {
-  color: var(--green);
+.navbar-nav .nav-link:hover {
+  color: var(--green) !important;
 }
 
-.nav-right a::after {
+.navbar-nav .nav-link::after {
   content: "";
   position: absolute;
   width: 0;
   height: 2px;
   background-color: var(--green);
-  bottom: -4px;
+  bottom: 0;
   left: 0;
   transition: width .25s ease-in-out;
 }
 
-.nav-right a:hover::after {
+.navbar-nav .nav-link:hover::after {
   width: 100%;
 }
 
-/* HAMBURGER + LABEL (MOBILE ONLY) */
-.hamburger-container {
-  display: none; /* shown via media query on mobile */
-  align-items: center;
-  gap: 0.4rem;
-  margin-left: auto;
+/* Bootstrap navbar toggler customization */
+.navbar-toggler {
+  border-color: var(--brown);
 }
 
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 28px;
-  height: 22px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(59, 42, 32, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.hamburger-bar {
-  width: 100%;
-  height: 3px;
-  background-color: var(--brown);
-  border-radius: 999px;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
+/* Mobile navbar styling */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: var(--beige);
+    margin-top: 1rem;
+    padding: 1rem 0;
+  }
 
-.hamburger-bar + .hamburger-bar {
-  margin-top: 4px;
-}
+  .navbar-nav {
+    align-items: start !important;
+  }
 
-.menu-label {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--brown);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
 
-/* animate to "X" when open */
-.hamburger.open .hamburger-bar:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-
-.hamburger.open .hamburger-bar:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.open .hamburger-bar:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+  .navbar-nav .nav-link {
+    padding: 0.75rem 0 !important;
+  }
 }
 
 /* HERO with lotus background + soft top/bottom fade */
@@ -195,11 +165,11 @@ body {
   margin-bottom: 1.25rem;
 }
 
-/* Button */
-.btn-primary {
+/* Button - Bootstrap integration */
+.btn-custom {
   padding: 0.75rem 2.4rem;
   background-color: var(--tan);
-  color: white;
+  color: white !important;
   border: none;
   border-radius: 30px;
   font-size: 1.05rem;
@@ -208,12 +178,14 @@ body {
     transform 0.15s ease-out,
     box-shadow 0.15s ease-out,
     background-color 0.15s ease-out;
+  text-decoration: none;
 }
 
-.btn-primary:hover {
+.btn-custom:hover {
   transform: translateY(-1px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
-  background-color: var(--brown);
+  background-color: var(--brown) !important;
+  color: white !important;
 }
 
 /* extra readability for glass effect */
@@ -226,38 +198,6 @@ body {
 
 /* Tablet / mobile adjustments */
 @media (max-width: 900px) {
-
-  /* show hamburger+label, and convert nav into a dropdown */
-  .hamburger-container {
-    display: flex;
-  }
-
-  .nav-right {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-    background-color: var(--beige);
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0;
-    gap: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.25s ease;
-    z-index: 9;
-  }
-
-  .nav-right a {
-    width: 100%;
-    padding: 0.8rem 6vw;
-    border-top: 1px solid rgba(0,0,0,0.06);
-  }
-
-  .nav-right.open {
-    max-height: 260px; /* enough to show all links */
-  }
-
   .hero.hero-connected {
     height: auto;
     min-height: 80vh;
