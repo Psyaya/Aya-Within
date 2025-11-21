@@ -1,0 +1,288 @@
+/* =======================================
+   AYA-WITHIN – ABOUT IFS PAGE
+======================================= */
+
+/* -------- Brand colors -------- */
+:root {
+  --pink: #C86F80;
+  --cream: #F4E6D1;
+  --tan: #B78D6D;
+  --green: #6E814F;
+  --darkgreen: #3C5030;
+  --brown: #3B2A20;
+  --browntext: #3B2A20;
+  --white: #ffffff;
+}
+
+/* -------- Reset + base -------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--cream);
+  color: var(--browntext);
+}
+
+.page {
+  width: 100%;
+}
+
+/* -------- Typography -------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  color: var(--browntext);
+}
+
+p {
+  font-size: 1rem;
+  color: var(--browntext);
+}
+
+/* =======================================
+   NAVIGATION (same pattern as other pages)
+======================================= */
+
+.custom-nav {
+  background-color: var(--cream);
+  border-bottom: 1px solid var(--tan);
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+.nav-logo {
+  height: 48px;
+  width: auto;
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+  color: var(--browntext) !important;
+  text-decoration: none;
+  font-size: 0.98rem;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--pink) !important;
+}
+
+/* Toggler */
+.navbar-toggler {
+  border-color: var(--brown);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(59, 42, 32, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Mobile nav */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: var(--cream);
+    margin-top: 0.75rem;
+    padding: 0.75rem 0;
+  }
+
+  .navbar-nav {
+    align-items: flex-start !important;
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.65rem 0 !important;
+  }
+}
+
+/* =======================================
+   ABOUT IFS HERO SECTION
+======================================= */
+
+.about-ifs-hero {
+  background-color: #2a2220; /* deeper, grounded tone */
+  padding: 3.4rem 4vw 3.8rem; /* tighter outer padding */
+  color: #fdf7f2;
+}
+
+.about-ifs-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Two-column layout – no gap between columns */
+.about-ifs-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+  column-gap: 0;              /* no space between text + image */
+  row-gap: 2.2rem;
+  align-items: stretch;
+}
+
+/* Text card – only rounded on the left so it kisses the image */
+.about-ifs-text {
+  background-color: rgba(59, 42, 32, 0.96);
+  border-radius: 22px 0 0 22px;
+  padding: 2.2rem 2.1rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(244, 230, 209, 0.25);
+}
+
+/* Eyebrow + heading centered like the template */
+.about-ifs-eyebrow {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  color: var(--cream);
+  margin-bottom: 0.25rem;
+  text-align: center;
+}
+
+.about-ifs-heading {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: 2.1rem;
+  color: #ffffff;
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+
+/* Lotus + horizontal line (flex; lines shrink instead of wrapping) */
+.about-ifs-lotus-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin: 0.3rem 0 1.4rem;
+}
+
+.about-ifs-lotus-wrap::before,
+.about-ifs-lotus-wrap::after {
+  content: "";
+  height: 1px;
+  background-color: rgba(200, 111, 128, 0.8); /* soft pink line */
+  flex: 1;
+  max-width: 140px;
+}
+
+.about-ifs-lotus {
+  max-width: 110px;
+  height: auto;
+}
+
+/* Body text left-aligned for readability */
+.about-ifs-text p {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: rgba(244, 230, 209, 0.96);
+  margin-bottom: 1rem;
+}
+
+/* CTA button – centered */
+.about-ifs-button-wrap {
+  margin-top: 1.7rem;
+  text-align: center;
+}
+
+.about-ifs-cta {
+  border-radius: 999px;
+  background-color: var(--pink);
+  border-color: var(--pink);
+  padding: 0.75rem 2rem;
+  font-size: 0.98rem;
+}
+
+.about-ifs-cta:hover {
+  background-color: var(--tan);
+  border-color: var(--tan);
+}
+
+/* Image block – rounded only on the right, touches text card */
+.about-ifs-image-block {
+  display: flex;
+  align-items: stretch;
+}
+
+.about-ifs-image {
+  width: 100%;
+  min-height: 320px;
+  border-radius: 0 22px 22px 0;
+  background-image: url("../images/ColorsJ.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* =======================================
+   RESPONSIVE
+======================================= */
+
+@media (max-width: 991.98px) {
+  .about-ifs-hero {
+    padding: 3.1rem 5vw 3.4rem;
+  }
+
+  .about-ifs-grid {
+    grid-template-columns: 1fr;
+    row-gap: 1.8rem;
+  }
+
+  .about-ifs-text {
+    padding: 2rem 1.7rem;
+    border-radius: 22px 22px 22px 22px; /* full card when stacked */
+  }
+
+  .about-ifs-heading {
+    font-size: 1.9rem;
+  }
+
+  .about-ifs-lotus-wrap::before,
+  .about-ifs-lotus-wrap::after {
+    max-width: 90px;  /* lines shrink on smaller screens */
+  }
+
+  .about-ifs-image {
+    min-height: 260px;
+    border-radius: 22px; /* standalone image card on mobile */
+    margin-top: 0.2rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-ifs-hero {
+    padding: 2.7rem 5vw 3rem;
+  }
+
+  .about-ifs-text {
+    padding: 1.8rem 1.45rem;
+  }
+
+  .about-ifs-lotus {
+    max-width: 90px;
+  }
+
+  .about-ifs-lotus-wrap::before,
+  .about-ifs-lotus-wrap::after {
+    max-width: 70px;
+  }
+}
