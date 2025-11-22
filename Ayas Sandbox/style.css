@@ -157,7 +157,7 @@ body {
     linear-gradient(to bottom, rgba(244, 230, 209, 0.9) 0%, rgba(244, 230, 209, 0) 22%),
     url("images/lotus-banner.png");
   background-size: 120%;
-  background-position: -5% center; /* adjusted position */
+  background-position: -29% center; /* adjusted position */
   background-repeat: no-repeat;
 }
 
