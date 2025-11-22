@@ -1,0 +1,417 @@
+/* =======================================
+   AYA-WITHIN GLOBAL STYLES
+======================================= */
+
+/* -------- Brand colors -------- */
+:root {
+  --pink: #C86F80;
+  --cream: #F4E6D1;
+  --tan: #B78D6D;
+  --green: #6E814F;
+  --darkgreen: #3C5030;
+  --brown: #3B2A20;
+  --browntext: #3B2A20;
+  --white: #ffffff;
+}
+
+/* -------- Reset + base layout -------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--cream);
+  color: var(--browntext);
+}
+
+.page {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* -------- Typography -------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  color: var(--browntext);
+}
+
+p {
+  font-size: 1rem;
+  color: var(--browntext);
+}
+
+/* -------- Buttons - Bootstrap integration -------- */
+.btn-custom-green {
+  display: inline-block;
+  background-color: var(--green) !important;
+  padding: 0.75rem 1.8rem;
+  font-size: 1.05rem;
+  color: var(--cream) !important;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  border: none;
+  font-weight: 500;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.18);
+}
+
+.btn-custom-green:hover {
+  background-color: var(--green) !important;
+  color: var(--cream) !important;
+  font-weight: 600;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.28);
+  transform: translateY(-2px);
+}
+
+/* Compatibility with existing btn-primary--green class */
+.btn-primary--green {
+  background-color: var(--green) !important;
+  color: var(--cream) !important;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.18);
+}
+
+.btn-primary--green:hover {
+  background-color: var(--green) !important;
+  font-weight: 600;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.22);
+  transform: translateY(-2px);
+}
+
+/* =======================================
+   NAVIGATION - Bootstrap integration
+======================================= */
+
+.custom-nav {
+  background-color: var(--cream);
+  border-bottom: 1px solid var(--tan);
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+.nav-logo {
+  height: 48px;
+  width: auto;
+}
+
+/* Bootstrap navbar links styling */
+.navbar-nav .nav-link {
+  color: var(--browntext) !important;
+  text-decoration: none;
+  font-size: 0.98rem;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--pink) !important;
+}
+
+/* Bootstrap navbar toggler customization */
+.navbar-toggler {
+  border-color: var(--brown);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(59, 42, 32, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Mobile navbar styling */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: var(--cream);
+    margin-top: 1rem;
+    padding: 1rem 0;
+  }
+
+  .navbar-nav {
+    align-items: start !important;
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.75rem 0 !important;
+  }
+}
+
+/* =======================================
+   HERO BASE (if needed)
+======================================= */
+
+.hero {
+  padding: 4.5rem 6vw 3rem;
+  text-align: center;
+  background-color: var(--cream);
+}
+
+.hero-heading {
+  font-size: 2.6rem;
+  margin-bottom: 0.7rem;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  margin-bottom: 1.3rem;
+}
+
+/* =======================================
+   MY OFFERINGS SECTION
+   (matches 3x2 mockup, no gaps)
+======================================= */
+
+.offerings-section {
+  padding: 0.4rem 6vw 0.6rem;   /* extremely tight */
+  background-color: var(--cream);
+}
+
+
+.offerings-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0;          /* remove internal padding */
+}
+
+/* Title + lotus icon */
+.offerings-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: var(--browntext);
+  letter-spacing: 0.02rem;
+  margin: 0.8rem 0 0.05rem 0;
+}
+
+.offerings-lotus {
+  width: 96px;
+  height: auto;
+  display: block;
+  margin: -0.9rem auto 0.3rem;  /* negative top margin pulls lotus up */
+}
+
+/* Outer shell – single rounded card holding the grid */
+.offerings-shell {
+  border: 1px solid var(--tan);
+  border-radius: 18px;
+  background-color: #fffaf3;
+  overflow: hidden;
+  margin: -2rem auto 0.6rem;   /* reduced bottom spacing */
+}
+
+
+/* Grid layout - Bootstrap integration with CSS Grid fallback */
+.offerings-grid {
+  /* Bootstrap classes handle the responsive grid */
+  /* display: grid; - removed, using Bootstrap's row/col system */
+  /* grid-template-columns: repeat(3, minmax(0, 1fr)); - removed */
+  /* grid-auto-rows: 1fr; - removed */
+}
+
+/* Every cell */
+.offering-cell {
+  padding: 2rem 1.8rem;
+  text-align: left;
+  position: relative;
+}
+
+/* Internal vertical + horizontal dividers (desktop layout) */
+.offering-cell {
+  border-right: 1px solid var(--tan);
+  border-bottom: 1px solid var(--tan);
+}
+
+/* Remove right border on last column */
+.offering-cell:nth-child(3),
+.offering-cell:nth-child(6) {
+  border-right: none;
+}
+
+/* Remove bottom border on last row */
+.offering-cell:nth-child(4),
+.offering-cell:nth-child(5),
+.offering-cell:nth-child(6) {
+  border-bottom: none;
+}
+
+/* Icon + text inside cell */
+.offering-icon {
+  width: 32px;        /* was 28 */
+  height: auto;
+  margin-top: 0.15rem;   /* aligns visually to text baseline */
+  flex-shrink: 0;
+}
+
+
+
+.offering-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.28rem;       /* slightly bigger */
+  font-weight: 500;         /* thinner than bold */
+  color: var(--browntext);
+  line-height: 1.25;
+  margin: 0;
+}
+/* Icon + heading inline */
+.offering-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  margin-bottom: 0.35rem;
+}
+
+
+/* Main title line */
+.offering-title-main {
+  display: block;
+}
+
+/* Smaller meta line: minutes, first-time, limited-time, coming soon */
+.offering-title-meta {
+  display: block;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: rgba(110, 129, 79, 0.8);   /* soft green from your palette */
+  margin-top: 0.15rem;
+  line-height: 1.25;
+}
+
+
+
+
+.offering-tag {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--green);
+  margin-top: 0.25rem;
+}
+
+.offering-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Make content a bit wider / more readable */
+.offering-cell p {
+  max-width: 32rem;
+}
+
+/* Link cards: remove underline, add subtle hover but keep grid intact */
+.offering-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.offering-link:hover .offering-title-main {
+  color: rgba(59, 42, 32, 0.95);
+  font-weight: 600;
+  letter-spacing: 0.01rem;
+  transition: color 0.25s ease, letter-spacing 0.25s ease;
+}
+
+
+/* --- Center BOTTOM-MIDDLE “Book a Session” cell --- */
+.offering-cell--cta {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cream);  /* page background so it “floats” */
+}
+
+
+
+
+.offering-cell--cta .btn-primary {
+  margin: 0;
+}
+
+/* Disclaimer under grid */
+.offerings-disclaimer {
+  max-width: 720px;
+  margin: 0rem auto 0;    /* reduced vertical gap under grid */
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(59, 42, 32, 0.9);
+}
+
+
+/* =======================================
+   RESPONSIVE FOR OFFERINGS GRID - Bootstrap integration
+======================================= */
+
+/* Tablet layout (Bootstrap md breakpoint) - 2 columns */
+@media (max-width: 991px) and (min-width: 768px) {
+  .offerings-section {
+    padding: 0.4rem 5vw 0.8rem;
+  }
+
+  .offering-cell {
+    padding: 1.8rem 1.6rem;
+    border-right: 1px solid var(--tan) !important;
+    border-bottom: 1px solid var(--tan) !important;
+  }
+
+  /* Remove right border on even columns (2nd column in 2-col layout) */
+  .offering-cell:nth-child(2n) {
+    border-right: none !important;
+  }
+
+  /* Remove bottom border on last row */
+  .offering-cell:nth-child(5),
+  .offering-cell:nth-child(6) {
+    border-bottom: none !important;
+  }
+
+  .offering-cell--cta {
+    background-color: var(--cream);
+    border-bottom: none !important;
+  }
+}
+
+/* Mobile layout (Bootstrap sm and xs breakpoints) - 1 column */
+@media (max-width: 767px) {
+  .offerings-section {
+    padding: 0.4rem 5vw 0.8rem;
+  }
+
+  .offering-cell {
+    border-right: none !important;
+    border-bottom: 1px solid var(--tan) !important;
+  }
+
+  /* Move CTA cell to the end visually */
+  .offering-cell--cta {
+    order: 6;
+    background-color: var(--cream);
+    border-top: 1px solid var(--tan) !important;
+    border-bottom: none !important;
+  }
+
+  .offerings-title {
+    font-size: 2rem;
+  }
+
+  .offering-cell p {
+    max-width: none;
+  }
+}
+
