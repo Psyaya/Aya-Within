@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Aya-Within – Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <!-- NAVIGATION BAR -->
+      <nav class="navbar navbar-expand-lg nav custom-nav">
+        <div class="container-fluid px-lg-4">
+          <a class="navbar-brand" href="#">
+            <img
+              src="images/nav-logo-small-transparent.png"
+              alt="Aya-Within logo"
+              class="nav-logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav nav-right gap-lg-4">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#offerings">Offerings</a>
+              </li>
+
+              <!-- ABOUT DROPDOWN (no links wired yet on purpose) -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="aboutDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  About
+                </a>
+                <ul class="dropdown-menu custom-dropdown" aria-labelledby="aboutDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#">About Aya</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Testimonials</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">About IFS</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#blog">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- HERO SECTION -->
+      <section class="hero hero-connected" id="home">
+        <div class="hero-inner container">
+          <div class="hero-col-text row align-items-start">
+            <!-- Logo -->
+            <div class="hero-logo-circle col-auto">
+              <img
+                src="images/logo-8cs.png"
+                alt="Aya-Within 8Cs Logo"
+                class="hero-logo-8cs"
+              />
+            </div>
+
+            <!-- Text + button group -->
+            <div class="hero-copy col">
+              <h1 class="hero-heading">Welcome to All Your Parts</h1>
+              <p class="hero-subtitle">
+                Patience, Presence, Persistence, Playfulness, Perspective. <br />
+                Guiding you to reconnect with Self.
+              </p>
+              <a
+                class="btn btn-primary btn-custom"
+                href="https://calendly.com/aya-within"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Book a Session
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OFFERINGS SECTION -->
+      <section class="hero hero-connected" id="offerings">
+        <div class="hero-inner container">
+          <div class="hero-col-text row align-items-start">
+            <!-- Logo -->
+            <div class="hero-logo-circle col-auto">
+              <img
+                src="images/logo-8cs.png"
+                alt="Aya-Within 8Cs Logo"
+                class="hero-logo-8cs"
+              />
+            </div>
+
+            <!-- Text + button group -->
+            <div class="hero-copy col">
+              <h1 class="hero-heading">My Offerings</h1>
+              <p>What do you want here?</p>
+       <p>Forget the google doc and templates now, just work with the webpages I made in Pages.
+       I made a semi functional page in Aya's sandbox that just links to the pages easily and you can use that
+       to make sure pages dont break as you add them here, And also if we can get the forms working that would be swell! Thanks! etc...</p>
+          
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Close mobile menu when a link is clicked -->
+    <script>
+      document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          const navbarCollapse = document.querySelector(".navbar-collapse");
+          if (navbarCollapse.classList.contains("show")) {
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+            bsCollapse.hide();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
