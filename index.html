@@ -1,52 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Aya-Within – Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="page">
-      <!-- NAVIGATION BAR -->
-      <nav class="navbar navbar-expand-lg nav custom-nav">
-        <div class="container-fluid px-lg-4">
-          <a class="navbar-brand" href="#">
-            <img
-              src="images/nav-logo-small-transparent.png"
-              alt="Aya-Within logo"
-              class="nav-logo"
-            />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+<head>
+  <meta charset="UTF-8" />
+  <title>Aya-Within – All Pages</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav nav-right gap-lg-4">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#offerings">Offerings</a>
-              </li>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  />
+  <!-- Playfair Display Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
 
-              <!-- ABOUT DROPDOWN (no links wired yet on purpose) -->
+  <!-- Consolidated styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===================== NAV ====================== -->
+  <nav class="navbar navbar-expand-lg custom-nav">
+    <div class="container-fluid px-lg-4">
+      <a class="navbar-brand" href="#home">
+        <img src="images/nav-logo-small-transparent.png" alt="Aya-Within logo" class="nav-logo" 
+        />
+
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav nav-right gap-lg-4">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#offerings">Offerings</a></li>
+          <!-- ABOUT DROPDOWN (no links wired yet on purpose) -->
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
@@ -60,29 +66,26 @@
                 </a>
                 <ul class="dropdown-menu custom-dropdown" aria-labelledby="aboutDropdown">
                   <li>
-                    <a class="dropdown-item" href="#">About Aya</a>
+                    <a class="dropdown-item" href="#about-aya">About Aya</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">Testimonials</a>
+                    <a class="dropdown-item" href="#testimonials">Testimonials</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">About IFS</a>
+                    <a class="dropdown-item" href="#about-ifs">About IFS</a>
                   </li>
                 </ul>
               </li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- =================== END NAV ==================== -->
 
-              <li class="nav-item">
-                <a class="nav-link" href="#blog">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!-- HERO SECTION -->
+  <main>
+    <!-- HERO HOME SECTION -->
       <section class="hero hero-connected" id="home">
         <div class="hero-inner container">
           <div class="hero-col-text row align-items-start">
@@ -114,52 +117,615 @@
           </div>
         </div>
       </section>
+    <!-- ================= OFFERINGS ================= -->
+    <section class="offerings-section" id="offerings">
+      <div class="offerings-inner container-fluid">
+        <h2 class="offerings-title">My Offerings</h2>
+        <img src="images/lotus icon 3-leaf Transparent.png" alt="Lotus icon" class="offerings-lotus" />
 
-      <!-- OFFERINGS SECTION -->
-      <section class="hero hero-connected" id="offerings">
-        <div class="hero-inner container">
-          <div class="hero-col-text row align-items-start">
-            <!-- Logo -->
-            <div class="hero-logo-circle col-auto">
-              <img
-                src="images/logo-8cs.png"
-                alt="Aya-Within 8Cs Logo"
-                class="hero-logo-8cs"
-              />
+        <div class="offerings-shell">
+          <div class="offerings-grid row g-0">
+            <div class="offering-cell col-12 col-md-6 col-lg-4">
+              <a class="offering-link" href="https://calendly.com/aya-within/20min-discovery" target="_blank" rel="noopener noreferrer">
+                <div class="offering-header">
+                  <img src="images/lotus icon 3-leaf Transparent.png" alt="" class="offering-icon" />
+                  <h3 class="offering-title">
+                    <span class="offering-title-main">Clarity Call</span>
+                    <span class="offering-title-meta">(20 minutes · complimentary for first-time clients)</span>
+                  </h3>
+                </div>
+                <p class="offering-text">
+                  A warm, no-pressure space to meet, ask questions, and sense whether Aya-Within and IFS coaching feel like a good fit for you.
+                </p>
+              </a>
             </div>
 
-            <!-- Text + button group -->
-            <div class="hero-copy col">
-              <h1 class="hero-heading">My Offerings</h1>
-              <p>What do you want here?</p>
-       <p>Forget the google doc and templates now, just work with the webpages I made in Pages.
-       I made a semi functional page in Aya's sandbox that just links to the pages easily and you can use that
-       to make sure pages dont break as you add them here, And also if we can get the forms working that would be swell! Thanks! etc...</p>
-          
+            <div class="offering-cell col-12 col-md-6 col-lg-4">
+              <a class="offering-link" href="https://calendly.com/aya-within/complimentary" target="_blank" rel="noopener noreferrer">
+                <div class="offering-header">
+                  <img src="images/lotus icon 3-leaf Transparent.png" alt="" class="offering-icon" />
+                  <h3 class="offering-title">
+                    <span class="offering-title-main">Introductory IFS Session & Clarity Call</span>
+                    <span class="offering-title-meta">(60 minutes · limited-time complimentary offer)</span>
+                  </h3>
+                </div>
+                <p class="offering-text">
+                  A complimentary first IFS session to gently explore your inner world, meet a few parts, and experience guided inner work.
+                </p>
+              </a>
+            </div>
+
+            <div class="offering-cell col-12 col-md-6 col-lg-4">
+              <a class="offering-link" href="https://calendly.com/aya-within/coaching-session" target="_blank" rel="noopener noreferrer">
+                <div class="offering-header">
+                  <img src="images/lotus icon 3-leaf Transparent.png" alt="" class="offering-icon" />
+                  <h3 class="offering-title">
+                    <span class="offering-title-main">IFS Coaching Session</span>
+                    <span class="offering-title-meta">(60 minutes)</span>
+                  </h3>
+                </div>
+                <p class="offering-text">
+                  A focused 60-minute session to connect with your parts, soften inner criticism, and cultivate more clarity, choice, and self-compassion.
+                </p>
+              </a>
+            </div>
+
+            <div class="offering-cell col-12 col-md-6 col-lg-4">
+              <a class="offering-link" href="https://calendly.com/aya-within/ifs-coaching-session-90-min" target="_blank" rel="noopener noreferrer">
+                <div class="offering-header">
+                  <img src="images/lotus icon 3-leaf Transparent.png" alt="" class="offering-icon" />
+                  <h3 class="offering-title">
+                    <span class="offering-title-main">IFS Coaching Session</span>
+                    <span class="offering-title-meta">(90 minutes)</span>
+                  </h3>
+                </div>
+                <p class="offering-text">
+                  A spacious 90-minute session for deeper journeys with one or more parts, giving time for slowing down, tending to emotion, and integrating what emerges.
+                </p>
+              </a>
+            </div>
+
+            <div class="offering-cell offering-cell--cta col-12 col-md-6 col-lg-4">
+              <a href="https://calendly.com/aya-within" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-custom-green">
+                Book a Session
+              </a>
+            </div>
+
+            <div class="offering-cell col-12 col-md-6 col-lg-4">
+              <div class="offering-header">
+                <img src="images/lotus icon 3-leaf Transparent.png" alt="" class="offering-icon" />
+                <h3 class="offering-title">
+                  <span class="offering-title-main">More Offerings</span>
+                  <span class="offering-title-meta">(coming soon)</span>
+                </h3>
+              </div>
+              <p class="offering-text">
+                Future offerings may include small group circles, themed series, or workshops that weave IFS, meditation, and gentle embodiment.
+              </p>
             </div>
           </div>
         </div>
-      </section>
+
+        <p class="offerings-disclaimer">
+          Please note: I am not a licensed therapist. These sessions are for coaching and personal exploration, not therapy or mental health treatment.
+        </p>
+      </div>
+    </section>
+    <!-- =============== END OFFERINGS =============== -->
+
+    <!-- =================== ABOUT AYA =================== -->
+    <section class="about-hero" id="about">
+      <div class="about-hero-inner container">
+        <div class="about-grid">
+          <blockquote class="about-quote">
+            <p class="about-quote-text">
+              "Allowing myself to feel was the greatest gift of meeting with Aya. Feeling my emotions took me straight to my truth"
+            </p>
+            <footer class="about-quote-author">— Elizabeth Mayorca</footer>
+          </blockquote>
+
+          <div class="about-photo-block">
+            <div class="about-photo-wrapper">
+              <img src="images/Aya Dog.jpg" alt="Aya smiling outdoors with her dog" class="about-photo" />
+            </div>
+            <img src="images/lotus banner rectangle.png" alt="" class="about-lotus-banner" />
+          </div>
+
+          <article class="about-card">
+            <header class="about-card-header">
+              <img src="images/lotus icon 3-leaf Transparent.png" alt="" class="about-card-lotus" />
+              <h1 class="about-card-title">About Aya</h1>
+            </header>
+
+            <div class="about-bio">
+              <p class="about-card-text about-bio-intro">
+                Hello, My name is Aya (Ayelet H) Fogel. My path into Internal Family Systems (IFS) started with
+                over a decade of Vipassanā / Insight meditation and community practice.
+                That work showed me the healing power of meeting inner experiences with
+                curiosity and compassion, rather than pressure or judgment.
+              </p>
+
+              <div class="about-bio-more">
+                <p class="about-card-text">
+                  My background includes a BS in psychobiology, and professional experience teaching,
+                  international program coordination, and facilitation of yoga (200RYT), meditation,
+                  and creative expression workshops.
+                  I'm currently an emerging IFS practitioner in the IFSCA Stepping Stones
+                  training program, about three-quarters complete, graduating end of December 2026.
+                </p>
+
+                <p class="about-card-text">
+                  In my work, I support people in cultivating Self-leadership, emotional clarity, and
+                  a more compassionate relationship with their inner parts. Many of the people I work
+                  with are therapists, coaches, and helping professionals who are seeking to enhance
+                  self-understanding and professional effectiveness through IFS-based work.
+                </p>
+
+                <p class="about-card-text">
+                  Having lived in the USA, Japan, Thailand, and India, I bring a
+                  cross-cultural perspective and a mindfulness-based approach that honors the
+                  complexity and dignity of each person's inner life.
+                </p>
+              </div>
+
+              <button type="button" class="about-bio-toggle" aria-expanded="false">Read more</button>
+            </div>
+          </article>
+
+          <div class="about-button-wrap">
+            <a href="https://maps.app.goo.gl/LFZQJqw6SZHZZkeK9" class="google-reviews-btn" target="_blank" rel="noopener noreferrer">
+              See Aya-Within Reviews on Google
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= END ABOUT AYA ================= -->
+
+    <!-- ================ TESTIMONIALS ================ -->
+    <section class="testimonials-hero" id="testimonials">
+      <div class="testimonials-inner container">
+        <header class="testimonials-header text-center">
+          <img src="images/lotus icon 3-leaf Transparent.png" alt="" class="testimonials-lotus" />
+          <h1 class="testimonials-title">Testimonials</h1>
+          <p class="testimonials-subtitle">Words From Those I've Worked With</p>
+        </header>
+
+        <div id="testimonialCarousel" class="carousel slide testimonials-carousel" data-bs-ride="carousel" data-bs-interval="9000">
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row g-4">
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="testimonial-card">
+                    <div class="testimonial-icon-wrap">
+                      <img src="images/lotus icon 3-leaf Transparent.png" alt="" class="testimonial-icon" />
+                    </div>
+                    <p class="testimonial-text">
+                      Aya is a wonderful IFS coach and I've had several
+                      powerful sessions with her. She has a real gift for
+                      attunement, holding space, and thoughtful guidance.
+                    </p>
+                    <p class="testimonial-author">
+                      — Richard Lee-Thai<br />
+                      <span class="testimonial-role">Connection Coach &amp; TEDx Speaker</span>
+                    </p>
+                  </div>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="testimonial-card">
+                    <div class="testimonial-icon-wrap">
+                      <img src="images/lotus icon 3-leaf Transparent.png" alt="" class="testimonial-icon" />
+                    </div>
+                    <p class="testimonial-text">
+                      Aya has a gift to attune to people. She made me feel
+                      safe and welcomed, which helped me to identify and
+                      connect more deeply with my parts.
+                    </p>
+                    <p class="testimonial-author">
+                      — Melany Dobbin<br />
+                      <span class="testimonial-role">Counsellor</span>
+                    </p>
+                  </div>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="testimonial-card">
+                    <div class="testimonial-icon-wrap">
+                      <img src="images/lotus icon 3-leaf Transparent.png" alt="" class="testimonial-icon" />
+                    </div>
+                    <p class="testimonial-text">
+                      Aya is well versed in the IFS model and has integrated it
+                      beautifully. I love the way she picks up on nuance and
+                      the "sideways" things my system does, bringing care and
+                      curiosity to every little thing that emerges.
+                    </p>
+                    <p class="testimonial-author">
+                      — S.L.<br />
+                      <span class="testimonial-role">Therapist</span>
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="row g-4">
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="testimonial-card">
+                    <div class="testimonial-icon-wrap">
+                      <img src="images/lotus icon 3-leaf Transparent.png" alt="" class="testimonial-icon" />
+                    </div>
+                    <p class="testimonial-text">
+                      I found working with Aya easy and comfortable straight
+                      away. She is very intuitive and has a good awareness and
+                      understanding of how one is feeling doing this work.
+                      I would highly recommend her.
+                    </p>
+                    <p class="testimonial-author">— Kathy</p>
+                  </div>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="testimonial-card">
+                    <div class="testimonial-icon-wrap">
+                      <img src="images/lotus icon 3-leaf Transparent.png" alt="" class="testimonial-icon" />
+                    </div>
+                    <p class="testimonial-text">
+                      Aya is an excellent listener, is focused, and creates a
+                      safe environment that makes me feel comfortable digging
+                      into my thoughts and feelings.
+                    </p>
+                    <p class="testimonial-author">
+                      — Stan<br />
+                      <span class="testimonial-role">Corporate Sales Executive</span>
+                    </p>
+                  </div>
+                </article>
+
+                <article class="col-12 col-md-6 col-lg-4">
+                  <div class="testimonial-card testimonial-cta-card">
+                    <div class="testimonial-icon-wrap">
+                      <img src="images/lotus icon 3-leaf Transparent.png" alt="" class="testimonial-icon" />
+                    </div>
+                    <p class="testimonial-text testimonial-cta-text">
+                      You can explore more reflections and experiences on Google.
+                    </p>
+                    <div class="testimonial-cta-button-wrap">
+                      <a href="https://maps.app.goo.gl/LFZQJqw6SZHZZkeK9" class="google-reviews-btn" target="_blank" rel="noopener noreferrer">
+                        Google Reviews
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+
+          <div class="carousel-indicators testimonials-indicators">
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ============== END TESTIMONIALS ============== -->
+     <!-- ================= ABOUT IFS ================= -->
+      
+    <section class="about-ifs-hero leaf-bg-soft" id="about-ifs">
+      <div class="about-ifs-inner container">
+        <div class="about-ifs-grid">
+          <article class="about-ifs-text">
+            <div class="about-ifs-eyebrow">a bit more about</div>
+            <h1 class="about-ifs-heading">Internal Family Systems (IFS)</h1>
+
+            <div class="about-ifs-lotus-wrap">
+              <img src="images/Logo Pink Transparent.png" alt="Aya-Within lotus logo" class="about-ifs-lotus" />
+            </div>
+
+            <p>
+              Internal Family Systems (IFS) is an evidence-based model of inner
+              work that understands us as having many different "parts" —
+              like inner voices, roles, or aspects of our personality — and a
+              deeper, steady core called Self.
+            </p>
+
+            <p>
+              Rather than seeing these parts as problems, IFS views them as
+              protective and adaptive, each carrying its own history, burdens,
+              and intentions to help.
+            </p>
+
+            <p>
+              In IFS, we don't force change or try to "get rid of" any part.
+              Instead, we create space for a compassionate, curious
+              relationship with your inner system.
+            </p>
+
+            <p>
+              I like to think of us as having as many parts as a tree has
+              leaves: each one distinct, each with its own story, all
+              belonging to one living, connected whole.
+            </p>
+
+            <div class="about-ifs-button-wrap">
+              <a class="btn btn-primary about-ifs-cta" href="#offerings">
+                Explore IFS Sessions
+              </a>
+            </div>
+          </article>
+
+          <div class="about-ifs-image-block">
+            <div class="about-ifs-image"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =============== END ABOUT IFS =============== -->
+
+    <!-- ================= BLOG ================= -->
+    <section class="blog-hero leaf-bg-soft" id="blog">
+      <div class="blog-hero-inner container">
+        <div class="blog-card">
+          <header class="blog-header text-center">
+            <p class="blog-eyebrow">Blog & Resources</p>
+            <h1 class="blog-title">This space is still taking root.</h1>
+          </header>
+
+          <p class="blog-text">
+            I'm slowly weaving together reflections, stories, and IFS-informed resources
+            to share here. For now, you're welcome to explore my current offerings or
+            reach out if you'd like to connect more directly.
+          </p>
+
+          <div class="blog-buttons">
+            <a href="#offerings" class="btn btn-primary blog-btn-primary">Explore Offerings</a>
+            <a href="#contact" class="btn btn-outline-light blog-btn-secondary">Get in Touch</a>
+          </div>
+
+          <p class="blog-note">
+            Future posts may include gentle practices, reflections on Self-leadership,
+            and ways to bring IFS into everyday life.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- =============== END BLOG =============== -->
+
+    <!-- ================= CONTACT ================= -->
+    <section class="contact-hero leaf-bg-soft" id="contact">
+      <div class="contact-inner container">
+        <div class="contact-layout">
+          <div class="contact-image-panel"></div>
+
+          <div class="contact-form-panel">
+            <header class="contact-header">
+              <h1 class="contact-title">Get in touch</h1>
+              <p class="contact-subtitle">
+                Please share a few details below and I'll respond as soon as I'm able.
+              </p>
+            </header>
+
+            <form class="contact-form" action="#" method="post">
+              <div class="contact-row">
+                <div class="contact-field">
+                  <label for="first-name">First Name</label>
+                  <input type="text" id="first-name" name="first-name" />
+                  <span class="contact-underline"></span>
+                </div>
+                <div class="contact-field">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" id="last-name" name="last-name" />
+                  <span class="contact-underline"></span>
+                </div>
+              </div>
+
+              <div class="contact-row single">
+                <div class="contact-field">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" required />
+                  <span class="contact-underline"></span>
+                </div>
+              </div>
+
+              <div class="contact-row single">
+                <div class="contact-field">
+                  <label for="message">Write a message</label>
+                  <textarea id="message" name="message" rows="4"></textarea>
+                  <span class="contact-underline"></span>
+                </div>
+              </div>
+
+              <div class="contact-row single">
+                <div class="contact-field">
+                  <label for="interest">Are you interested in? *</label>
+                  <div class="contact-select-wrapper">
+                    <select id="interest" name="interest" required>
+                      <option value="" disabled selected>Choose an option</option>
+                      <option value="ifs-coaching">IFS Coaching</option>
+                      <option value="practice-exchange">IFS Practice Exchange</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <span class="contact-underline"></span>
+                </div>
+              </div>
+
+              <div class="contact-submit-wrap">
+                <button type="submit" class="btn contact-submit-btn">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =============== END CONTACT =============== -->
+
+    <!-- =================== FOOTER =================== -->
+    <footer class="site-footer">
+      <div class="footer-main">
+        <nav class="footer-nav">
+          <div class="footer-nav-group">
+            <button type="button" class="footer-nav-group-toggle" aria-expanded="false">
+              <span>About</span>
+              <span class="footer-nav-caret">▾</span>
+            </button>
+            <div class="footer-nav-group-menu">
+              <a href="#about">About Aya</a>
+              <a href="#testimonials">Testimonials</a>
+              <a href="#about-ifs">About IFS</a>
+            </div>
+          </div>
+          <a href="#offerings">Offerings</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="footer-logo-block">
+          <img src="images/nav-logo-small-transparent.png" alt="Aya-Within logo" class="footer-nav-logo" />
+        </div>
+
+        <div class="footer-info-block">
+          <div class="footer-info-text">
+            <p class="footer-name">Aya (Ayelet H) Fogel</p>
+            <p class="footer-role">IFS-informed coach, meditation &amp; yoga teacher</p>
+          </div>
+
+          <div class="footer-social">
+            <span class="footer-follow-label">Follow me</span>
+            <div class="footer-social-icons">
+              <a href="https://www.instagram.com/aya.within_coaching?igsh=dHhnc2VjbWJvd3cx&utm_source=qr" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+                <i class="bi bi-instagram"></i>
+                <span class="footer-social-text">Instagram</span>
+              </a>
+              <a href="#" class="footer-social-link footer-social-fb">
+                <i class="bi bi-facebook"></i>
+                <span class="footer-social-text">Facebook</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-subscribe">
+        <div class="footer-subscribe-inner">
+          <p class="footer-subscribe-text">
+            Subscribe to get notified when new weekly availability opens.
+          </p>
+          <form class="footer-subscribe-form" action="#" method="post">
+            <img src="images/Lotus Square Transparent.png" alt="Lotus icon" class="footer-subscribe-lotus" />
+            <input type="email" name="subscribe-email" class="footer-subscribe-input" placeholder="e.g., email@example.com" />
+            <button type="submit" class="footer-subscribe-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <!-- ================= END FOOTER ================= -->
+  </main>
+
+  <!-- Contact Modal -->
+  <div class="modal fade contact-modal" id="contactNoticeModal" tabindex="-1" aria-labelledby="contactNoticeLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactNoticeLabel">Thank you for reaching out</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>This form is still resting just below the horizon — not quite ready to send messages yet.</p>
+          <p>For now, please email me directly at <strong>aya.within@gmail.com</strong>.</p>
+          <p>I look forward to connecting with you soon.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn contact-modal-btn" data-bs-dismiss="modal">Got it</button>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-    <!-- Close mobile menu when a link is clicked -->
-    <script>
-      document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
-        link.addEventListener("click", () => {
-          const navbarCollapse = document.querySelector(".navbar-collapse");
-          if (navbarCollapse.classList.contains("show")) {
-            const bsCollapse = new bootstrap.Collapse(navbarCollapse);
-            bsCollapse.hide();
-          }
+  <!-- Scripts -->
+  <script>
+    // About bio toggle
+    document.addEventListener("DOMContentLoaded", function () {
+      var bio = document.querySelector(".about-bio");
+      var toggle = document.querySelector(".about-bio-toggle");
+      if (bio && toggle) {
+        toggle.addEventListener("click", function () {
+          var isExpanded = bio.classList.toggle("is-expanded");
+          toggle.setAttribute("aria-expanded", isExpanded ? "true" : "false");
+          toggle.textContent = isExpanded ? "Read less" : "Read more";
         });
+      }
+    });
+
+    // Contact form modal
+    document.querySelector(".contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const modalEl = document.getElementById("contactNoticeModal");
+      if (modalEl) {
+        const modal = new bootstrap.Modal(modalEl);
+        modal.show();
+      }
+    });
+
+    // Footer About dropdown
+    const aboutGroup = document.querySelector(".footer-nav-group");
+    const aboutToggle = document.querySelector(".footer-nav-group-toggle");
+    if (aboutGroup && aboutToggle) {
+      aboutToggle.addEventListener("click", function () {
+        const isOpen = aboutGroup.classList.toggle("open");
+        aboutToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
       });
-    </script>
-  </body>
+      document.addEventListener("click", function (e) {
+        if (aboutGroup && !aboutGroup.contains(e.target) && aboutGroup.classList.contains("open")) {
+          aboutGroup.classList.remove("open");
+          aboutToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+
+    // Facebook placeholder
+    const fbLink = document.querySelector(".footer-social-fb");
+    if (fbLink) {
+      fbLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        alert("My Facebook page is still under construction. Thank you for your patience");
+      });
+    }
+
+    // Subscribe placeholder
+    const subscribeForm = document.querySelector(".footer-subscribe-form");
+    if (subscribeForm) {
+      subscribeForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("Thank you for your interest\n\nThis form isn't live yet.\n\nFor now, you're welcome to email me directly at:\naya.within@gmail.com");
+      });
+    }
+
+    // Mobile menu close
+    document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
+      link.addEventListener("click", () => {
+        const navbarCollapse = document.querySelector(".navbar-collapse");
+        if (navbarCollapse && navbarCollapse.classList.contains("show")) {
+          const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+          bsCollapse.hide();
+        }
+      });
+    });
+  </script>
+</body>
 </html>

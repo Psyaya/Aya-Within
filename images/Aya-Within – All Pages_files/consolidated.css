@@ -91,6 +91,179 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =======================================
+   HOME SECTION
+======================================= */
+/* HERO with lotus background + soft top/bottom fade */
+.hero.hero-connected {
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;   /* content at top */
+  justify-content: flex-start;
+  padding: 5.5rem 6vw 3rem;  /* space under navbar */
+  position: relative;
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(to top,    rgba(244, 230, 209, 0.9) 0%, rgba(244, 230, 209, 0) 22%),
+    linear-gradient(to bottom, rgba(244, 230, 209, 0.9) 0%, rgba(244, 230, 209, 0) 22%),
+    url("images/lotus-banner.png");
+  background-size: 120%;
+  background-position: -29% center; /* adjusted position */
+  background-repeat: no-repeat;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* DESKTOP: logo + text in a row at the top-left */
+.hero-col-text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2.5rem;
+}
+
+/* On desktop, the "circle wrapper" is just a simple wrapper – no halo */
+.hero-logo-circle {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  width: auto;
+  max-width: none;
+  aspect-ratio: auto;
+  display: block;
+}
+
+.hero-logo-8cs {
+  width: 320px;         /* larger logo on wide screens */
+  max-width: 22vw;      /* still scales a bit with very wide windows */
+  height: auto;
+  display: block;
+}
+
+.hero-copy {
+  max-width: 520px;
+  margin-top: 0.5rem;
+}
+
+.hero-heading {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  color: var(--brown);
+  margin-bottom: 0.75rem;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(59, 42, 32, 0.9);
+  margin-bottom: 1.25rem;
+}
+
+/* Button - Bootstrap integration */
+.btn-custom {
+  padding: 0.75rem 2.4rem;
+  background-color: var(--tan);
+  color: white !important;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease-out,
+    box-shadow 0.15s ease-out,
+    background-color 0.15s ease-out;
+  text-decoration: none;
+}
+
+.btn-custom:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  background-color: var(--brown) !important;
+  color: white !important;
+}
+
+/* extra readability for glass effect */
+.hero-heading,
+.hero-subtitle {
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.85);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Tablet / mobile adjustments (≤ 900px) */
+@media (max-width: 900px) {
+  .hero.hero-connected {
+    height: auto;
+    min-height: 80vh;
+    padding: 4.5rem 6vw 3rem;
+    align-items: center;
+    justify-content: center;
+    background-position: center bottom;
+    background-size: cover;
+  }
+
+  .hero-inner {
+    margin: 0 auto;
+  }
+
+  .hero-col-text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.0); /* ultra-light glassy box */
+    border-radius: 1.8rem;
+    padding: 1.8rem 1.6rem;
+    backdrop-filter: blur(6px);
+  }
+
+  .hero-logo-circle {
+    width: 220px;
+    max-width: 70vw;
+    aspect-ratio: 1 / 1;
+    background: rgba(255, 255, 255, 0.0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;   /* keeps the circle centered above the heading */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  }
+
+  .hero-logo-8cs {
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .hero-heading {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 500px) {
+  .hero.hero-connected {
+    padding-top: 5.5rem;
+  }
+
+  .hero-logo-circle {
+    width: 200px;
+  }
+}
+/* =======================================
    OFFERINGS SECTION
 ======================================= */
 .offerings-section {
