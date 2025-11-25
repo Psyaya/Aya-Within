@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aya-Within – Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  />
+  <!-- Playfair Display Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Main site styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===================== NAV ====================== -->
+  <nav class="navbar navbar-expand-lg custom-nav">
+    <div class="container-fluid px-lg-4">
+      <!-- Logo sends back to home on index -->
+      <a class="navbar-brand" href="index.html#home">
+        <img
+          src="images/nav-logo-small-transparent.png"
+          alt="Aya-Within logo"
+          class="nav-logo"
+        />
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav nav-right gap-lg-4">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#offerings">Offerings</a>
+          </li>
+
+          <!-- ABOUT DROPDOWN -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="index.html#about"
+              id="aboutDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              About
+            </a>
+            <ul
+              class="dropdown-menu custom-dropdown"
+              aria-labelledby="aboutDropdown"
+            >
+              <li>
+                <a class="dropdown-item" href="index.html#about">About Aya</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="index.html#testimonials">Testimonials</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="index.html#about-ifs">About IFS</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="blog.html">Blog</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- =================== END NAV ==================== -->
+
+  <main>
+    <!-- ================ BLOG HERO ================ -->
+    <section class="blog-hero" id="blog">
+      <div class="blog-hero-inner container">
+        <div class="blog-card">
+          <p class="blog-eyebrow">Blog &amp; Resources</p>
+          <h1 class="blog-title">This space is still taking root.</h1>
+          <p class="blog-text">
+            I'm slowly weaving together reflections, stories, and IFS-informed
+            resources to share here. For now, you're welcome to explore my
+            current offerings or reach out if you'd like to connect more
+            directly.
+          </p>
+
+          <div class="blog-buttons">
+            <a
+              href="index.html#offerings"
+              class="btn btn-primary blog-btn-primary"
+            >
+              Explore Offerings
+            </a>
+            <a
+              href="index.html#contact"
+              class="btn btn-outline-light blog-btn-secondary"
+            >
+              Get in Touch
+            </a>
+          </div>
+
+          <p class="blog-note">
+            Future posts may include gentle practices, reflections on
+            Self-leadership, and ways to bring IFS into everyday life.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- ============== END BLOG HERO ============== -->
+
+    <!-- =================== FOOTER =================== -->
+    <footer class="site-footer">
+      <div class="footer-main">
+        <nav class="footer-nav">
+          <div class="footer-nav-group">
+            <button
+              type="button"
+              class="footer-nav-group-toggle"
+              aria-expanded="false"
+            >
+              <span>About</span>
+              <span class="footer-nav-caret">▾</span>
+            </button>
+            <div class="footer-nav-group-menu">
+              <a href="index.html#about">About Aya</a>
+              <a href="index.html#testimonials">Testimonials</a>
+              <a href="index.html#about-ifs">About IFS</a>
+            </div>
+          </div>
+          <a href="index.html#offerings">Offerings</a>
+          <a href="blog.html">Blog</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <div class="footer-logo-block">
+          <img
+            src="images/nav-logo-small-transparent.png"
+            alt="Aya-Within logo"
+            class="footer-nav-logo"
+          />
+        </div>
+
+        <div class="footer-info-block">
+          <div class="footer-info-text">
+            <p class="footer-name">Aya (Ayelet H) Fogel</p>
+            <p class="footer-role">
+              IFS-informed coach, meditation &amp; yoga teacher
+            </p>
+          </div>
+
+          <div class="footer-social">
+            <span class="footer-follow-label">Follow me</span>
+            <div class="footer-social-icons">
+              <a
+                href="https://www.instagram.com/aya.within_coaching?igsh=dHhnc2VjbWJvd3cx&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-social-link"
+              >
+                <i class="bi bi-instagram"></i>
+                <span class="footer-social-text">Instagram</span>
+              </a>
+              <a href="#" class="footer-social-link footer-social-fb">
+                <i class="bi bi-facebook"></i>
+                <span class="footer-social-text">Facebook</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subscribe strip -->
+      <div class="footer-subscribe">
+        <div class="footer-subscribe-inner">
+          <p class="footer-subscribe-text">
+            Subscribe to get notified when new weekly availability opens.
+          </p>
+          <form
+            class="footer-subscribe-form"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+          >
+            <!-- Web3Forms config -->
+            <input
+              type="hidden"
+              name="access_key"
+              value="bb0bb937-19ad-456f-927f-baa142da72b6"
+            />
+            <input
+              type="hidden"
+              name="from_name"
+              value="Aya-Within Website"
+            />
+            <input
+              type="hidden"
+              name="subject"
+              value="New availability subscription from Aya-Within"
+            />
+
+            <img
+              src="images/Lotus Square Transparent.png"
+              alt="Lotus icon"
+              class="footer-subscribe-lotus"
+            />
+            <input
+              type="email"
+              name="subscribe-email"
+              class="footer-subscribe-input"
+              placeholder="e.g., email@example.com"
+              required
+            />
+            <button type="submit" class="footer-subscribe-btn">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <!-- ================= END FOOTER ================= -->
+
+    <!-- ============== MODALS (subscribe only) ============== -->
+    <div
+      class="modal fade"
+      id="subscribeSuccessModal"
+      tabindex="-1"
+      aria-labelledby="subscribeSuccessLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="subscribeSuccessLabel">
+              Thank you for subscribing
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Your email has been received.</p>
+            <p>I’ll be in touch when new weekly availability opens.</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn contact-modal-btn"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============ END MODALS ============ -->
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Scripts (same behavior as index where needed) -->
+  <script>
+    // Footer About dropdown
+    const aboutGroup = document.querySelector(".footer-nav-group");
+    const aboutToggle = document.querySelector(".footer-nav-group-toggle");
+    if (aboutGroup && aboutToggle) {
+      aboutToggle.addEventListener("click", function () {
+        const isOpen = aboutGroup.classList.toggle("open");
+        aboutToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+      document.addEventListener("click", function (e) {
+        if (
+          aboutGroup &&
+          !aboutGroup.contains(e.target) &&
+          aboutGroup.classList.contains("open")
+        ) {
+          aboutGroup.classList.remove("open");
+          aboutToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+
+    // Facebook placeholder
+    const fbLink = document.querySelector(".footer-social-fb");
+    if (fbLink) {
+      fbLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        alert(
+          "My Facebook page is still under construction. Thank you for your patience"
+        );
+      });
+    }
+
+    // Subscribe form – send via Web3Forms + show success modal
+    const subscribeForm = document.querySelector(".footer-subscribe-form");
+
+    if (subscribeForm) {
+      subscribeForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(subscribeForm);
+
+        try {
+          const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData,
+          });
+
+          const data = await response.json();
+
+          if (data.success) {
+            subscribeForm.reset();
+            const modalEl = document.getElementById("subscribeSuccessModal");
+            if (modalEl && typeof bootstrap !== "undefined") {
+              const modal = new bootstrap.Modal(modalEl);
+              modal.show();
+            } else {
+              alert(
+                "Thank you for subscribing! I’ll be in touch when new availability opens."
+              );
+            }
+          } else {
+            console.error("Web3Forms error:", data);
+            alert(
+              "Something went wrong sending your subscription. Please try again, or email me at aya.within@gmail.com."
+            );
+          }
+        } catch (error) {
+          console.error("Network error:", error);
+          alert(
+            "There was a problem sending your subscription. Please try again later, or email me at aya.within@gmail.com."
+          );
+        }
+      });
+    }
+
+    // Mobile menu close – ignore dropdown toggles, but close on dropdown items
+document
+  .querySelectorAll(".navbar-nav .nav-link, .dropdown-menu .dropdown-item")
+  .forEach((link) => {
+    if (link.classList.contains("dropdown-toggle")) return;
+
+    link.addEventListener("click", () => {
+      const navbarCollapse = document.querySelector(".navbar-collapse");
+      if (navbarCollapse && navbarCollapse.classList.contains("show")) {
+        const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+        bsCollapse.hide();
+      }
+    });
+  });
+
+  </script>
+</body>
+</html>

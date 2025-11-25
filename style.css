@@ -42,12 +42,34 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", "Times New Roman", serif;
   color: var(--browntext);
 }
+/* Fix anchor scroll offset for sticky navbar */
+section[id] {
+  scroll-margin-top: 120px; /* adjust to match your nav height */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+section[id] {
+  scroll-margin-top: 120px;
+}
+@media (max-width: 768px) {
+  section[id] {
+    scroll-margin-top: 170px;  /* more room under taller mobile nav */
+  }
+}
+
 
 /* =======================================
    NAVIGATION
 ======================================= */
 .custom-nav {
-  background-color: var(--cream);
+  background: linear-gradient(
+    to bottom,
+    #F8CFDA 0%,     /* soft pink top */
+    #F4E6D1 65%,    /* mostly cream mid */
+    #F4E6D1 100%    /* full cream bottom */
+  );
   border-bottom: 1px solid var(--tan);
   position: sticky;
   top: 0;
@@ -280,12 +302,7 @@ h1, h2, h3, h4, h5, h6 {
   /* thin line between hero and offerings */
   border-top: 2px solid rgba(183, 141, 109, 0.7); /* soft tan divider */
 
-  /* LAYERS:
-     1) tan blend at very top of offerings (hides any "white strip" under hero)
-     2–3) cream fades, same as hero
-     4) flipped lotus image
-  */
-    /* same soft fades as the hero, but with flipped lotus */
+  /* same soft fades as the hero, but with flipped lotus */
   background-image:
     linear-gradient(to top,
       rgba(244, 230, 209, 0.9) 0%,
@@ -300,11 +317,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 120%;
   background-position: -29% center;
   background-repeat: no-repeat;
-
-
 }
-
-
 
 .offerings-inner {
   max-width: 1120px;
@@ -331,22 +344,58 @@ h1, h2, h3, h4, h5, h6 {
   margin: -2rem auto 0.6rem;
 }
 
+/* base: mobile (1 column) */
 .offering-cell {
   padding: 2rem 1.8rem;
   text-align: left;
-  border-right: 1px solid var(--tan);
+  border-right: none;
   border-bottom: 1px solid var(--tan);
 }
 
-.offering-cell:nth-child(3),
-.offering-cell:nth-child(6) {
-  border-right: none;
+.offering-cell:last-child {
+  border-bottom: none;
 }
 
-.offering-cell:nth-child(4),
-.offering-cell:nth-child(5),
-.offering-cell:nth-child(6) {
-  border-bottom: none;
+/* 2 columns (md: 768–991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .offering-cell {
+    border-right: 1px solid var(--tan);
+    border-bottom: 1px solid var(--tan);
+  }
+
+  /* no right border on last col in each row */
+  .offering-cell:nth-child(2),
+  .offering-cell:nth-child(4),
+  .offering-cell:nth-child(6) {
+    border-right: none;
+  }
+
+  /* no bottom border only on last row */
+  .offering-cell:nth-child(5),
+  .offering-cell:nth-child(6) {
+    border-bottom: none;
+  }
+}
+
+/* 3 columns (lg: 992px+) */
+@media (min-width: 992px) {
+  .offering-cell {
+    border-right: 1px solid var(--tan);
+    border-bottom: 1px solid var(--tan);
+  }
+
+  /* no right border on last col in each row */
+  .offering-cell:nth-child(3),
+  .offering-cell:nth-child(6) {
+    border-right: none;
+  }
+
+  /* no bottom border on last row */
+  .offering-cell:nth-child(4),
+  .offering-cell:nth-child(5),
+  .offering-cell:nth-child(6) {
+    border-bottom: none;
+  }
 }
 
 .offering-header {
@@ -407,6 +456,41 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--cream);
 }
 
+/* make the CTA cell be last + transparent on full width,
+   and let the lotus show behind it */
+@media (min-width: 992px) {
+  .offerings-shell {
+    background-color: transparent;
+  }
+
+  .offering-cell {
+    background-color: #fffaf3;
+  }
+
+  .offering-cell--cta {
+    background-color: transparent;
+  }
+}
+/* Mobile: make Book a Session card appear last */
+@media (max-width: 767.98px) {
+  .offering-cell--cta {
+    order: 6;
+  }
+}
+/* Mobile: add clean divider above Book a Session, remove double line below */
+@media (max-width: 767.98px) {
+
+  /* Add top border for clarity */
+  .offering-cell--cta {
+    border-top: 1px solid var(--tan) !important;
+  }
+
+  /* Remove bottom border to prevent double line */
+  .offering-cell--cta {
+    border-bottom: none !important;
+  }
+}
+
 .btn-custom-green {
   background-color: var(--green) !important;
   color: var(--cream) !important;
@@ -429,6 +513,25 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.9rem;
   color: rgba(59, 42, 32, 0.9);
 }
+
+/* ====== LOTUS + TAN LINE SAFETY BREAKPOINT HANDLING ====== */
+
+/* At 1025px and smaller: remove lotus background + remove tan border */
+@media (max-width: 1030px) {
+  .offerings-section {
+    background-image: none !important;     /* remove lotus */
+    background-size: auto !important;      /* reset */
+    border-top: none !important;           /* remove tan line */
+  }
+}
+
+/* At 881px and smaller: bring tan divider line back but no lotus */
+@media (max-width: 881px) {
+  .offerings-section {
+    border-top: 2px solid rgba(183, 141, 109, 0.7) !important;
+  }
+}
+
 
 
 /* =======================================
@@ -1101,6 +1204,9 @@ background: linear-gradient(
   display: inline-flex;
   align-items: center;
   gap: 0.2rem;
+}
+.footer-nav-group {
+  position: relative;
 }
 
 .footer-nav-group-menu {
