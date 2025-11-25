@@ -756,10 +756,20 @@ background: linear-gradient(
   color: rgba(59, 42, 32, 0.9);
 }
 
+/* Move testimonial carousel arrows further to the sides
+   so they don't cover the card text */
 .testimonials-carousel .carousel-control-prev,
 .testimonials-carousel .carousel-control-next {
-  width: 7%;
+  width: auto;          /* don't reserve big chunks of width */
   opacity: 0.95;
+}
+
+.testimonials-carousel .carousel-control-prev {
+  left: -2.8rem;        /* push further to the left */
+}
+
+.testimonials-carousel .carousel-control-next {
+  right: -2.8rem;       /* push further to the right */
 }
 
 .testimonials-carousel .carousel-control-prev-icon,
@@ -771,6 +781,7 @@ background: linear-gradient(
   background-size: 45% 45%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
+
 
 .testimonials-indicators {
   position: static;
