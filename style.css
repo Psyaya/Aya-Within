@@ -184,8 +184,23 @@ section[id] {
   font-size: 1.05rem;
   line-height: 1.6;
   color: var(--browntext);
-  margin-bottom: 1.25rem;
+  margin: 0.9rem auto 1.25rem;
+
+  /* reading panel (same on desktop + mobile) */
+  display: inline-block;
+  max-width: 46rem;
+  padding: 1.1rem 1.25rem;
+  border-radius: 22px;
+  background: rgba(244, 230, 209, 0.90); /* lighter inner box */
+  border: 1px solid rgba(183, 141, 109, 0.18);
+box-shadow:
+  0 8px 24px rgba(59, 42, 32, 0.10),
+  inset 0 0 40px rgba(244, 230, 209, 0.35);
+
+
+
 }
+
 
 
 /* Button - Bootstrap integration */
@@ -277,6 +292,12 @@ section[id] {
   margin-top: 18px;
 }
 
+/* --- HERO: allow key lines to stay single-line on wide desktop --- */
+@media (min-width: 1200px) {
+  .hero-copy {
+    max-width: 680px; /* enough room for single-line sentences */
+  }
+}
 
 
 /* ---------- RESPONSIVE ---------- */
@@ -339,6 +360,11 @@ section[id] {
 
   .hero-subtitle {
     font-size: 1rem;
+  }
+}
+@media (max-width: 900px) {
+  .hero-subtitle {
+    background: rgba(244, 230, 209, 0.70);
   }
 }
 
