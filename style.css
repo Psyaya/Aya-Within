@@ -183,9 +183,10 @@ section[id] {
 .hero-subtitle {
   font-size: 1.05rem;
   line-height: 1.6;
-  color: rgba(59, 42, 32, 0.9);
+  color: var(--browntext);
   margin-bottom: 1.25rem;
 }
+
 
 /* Button - Bootstrap integration */
 .btn-custom {
@@ -213,8 +214,70 @@ section[id] {
 /* extra readability for glass effect */
 .hero-heading,
 .hero-subtitle {
-  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.85);
+  text-shadow: none;
 }
+
+
+/* ===============================
+   HERO TYPOGRAPHY TUNING
+   =============================== */
+
+/* Center everything */
+.hero-copy {
+  text-align: center;
+}
+
+/* Make H1 slightly larger */
+.hero-heading {
+  font-size: clamp(42px, 4.2vw, 64px);
+  line-height: 1.1;
+}
+
+
+/* Two-sentence subtitle: add separation + hierarchy */
+.hero-lead {
+  display: block;
+  font-size: clamp(22px, 1.8vw, 28px);
+  line-height: 1.4;
+  margin-bottom: 1.05rem;   /* space between Every… and When… */
+  color: var(--browntext);
+}
+
+.hero-subline {
+  display: block;
+  font-size: clamp(18px, 1.4vw, 22px); /* smaller than the first sentence */
+  line-height: 1.45;
+  color: var(--browntext);
+}
+
+/* P-words: Playfair + green + clean spacing */
+.hero-pillars {
+  display: block;
+  font-size: clamp(16px, 1.15vw, 18px);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 0.95rem;
+  margin-bottom: 0.9rem;
+  color: var(--green); /* now it will actually show */
+}
+
+/* Tagline: not italic (cleaner) */
+.hero-tagline {
+  display: block;
+  font-size: clamp(19px, 1.55vw, 23px);
+  line-height: 1.4;
+  font-style: normal;   /* <-- removes italic */
+  margin-top: 0.2rem;
+  color: var(--browntext);
+}
+
+/* Button stays centered automatically now */
+.hero-copy .btn {
+  margin-top: 18px;
+}
+
+
 
 /* ---------- RESPONSIVE ---------- */
 
@@ -239,7 +302,8 @@ section[id] {
     align-items: center;
     text-align: center;
     gap: 1.5rem;
-    background: rgba(255, 255, 255, 0.0); /* ultra-light glassy box */
+    background: rgba(244, 230, 209, 0.55); /* cream glass */
+    border: 1px solid rgba(183, 141, 109, 0.35);
     border-radius: 1.8rem;
     padding: 1.8rem 1.6rem;
     backdrop-filter: blur(6px);
@@ -555,15 +619,18 @@ background: linear-gradient(
   margin: 0 auto;
 }
 
+/* =======================================
+   ABOUT AYA (desktop layout)
+======================================= */
+
 .about-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr); /* more space for text */
   grid-template-areas:
-    "quote  photo"
-    "card   photo"
-    "button photo";
+    "quote card"
+    "photo card";
   column-gap: 3rem;
-  row-gap: 2.4rem;
+  row-gap: 1.8rem; /* slightly tighter so it fits nicer */
   align-items: start;
 }
 
@@ -583,101 +650,60 @@ background: linear-gradient(
   font-size: 0.95rem;
 }
 
+/* Photo: keep it visually “contained” on desktop */
 .about-photo-block {
   grid-area: photo;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.6rem;
 }
 
 .about-photo-wrapper {
-  max-width: 540px;
   width: 100%;
+  max-width: 460px; /* slightly smaller so it doesn’t overpower */
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.24);
+
+  /* KEY FIX: cap the visible height so it won’t extend below the card */
+  max-height: clamp(240px, 22vw, 340px);
 }
 
 .about-photo {
   width: 100%;
+  height: 100%;
   display: block;
+  object-fit: cover;         /* crop instead of expanding layout */
+  object-position: center;   /* tweak if you want: center 25% */
 }
 
-.about-lotus-banner {
-  max-width: 500px;
-  width: 70%;
-  opacity: 0.9;
-  filter: blur(1px);
-  border-radius: 18px;
-}
-
+/* Card */
 .about-card {
   grid-area: card;
-  max-width: 680px;
-  background-color: #F9E4DC;
-  border-radius: 22px;
-  border: 1px solid rgba(59, 42, 32, 0.18);
-  padding: 1.7rem 2.4rem 2.3rem;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
-  transform: translateY(-6px);
+  width: 100%;
+  max-width: none;
 }
 
-.about-card-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
+/* Mobile stacking stays your current approach */
+@media (max-width: 991.98px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "quote" "photo" "card";
+    row-gap: 2rem;
+  }
+
+  .about-photo-wrapper {
+    max-height: none; /* let it be natural on mobile */
+  }
 }
 
-.about-card-lotus {
-  width: 30px;
-  height: auto;
-}
+/* =======================================
+   TESTIMONIALS
+======================================= */
+/* =======================================
+   Google Reviews Button
+======================================= */
 
-.about-card-title {
-  font-size: 1.9rem;
-  margin: 0;
-}
-
-.about-card-text {
-  font-size: 0.97rem;
-  line-height: 1.7;
-  margin-bottom: 1.1rem;
-}
-
-.about-bio-more {
-  display: none;
-}
-
-.about-bio.is-expanded .about-bio-more {
-  display: block;
-}
-
-.about-bio-toggle {
-  margin-top: 0.6rem;
-  padding: 0.45rem 1.3rem;
-  border-radius: 999px;
-  border: 1px solid rgba(59, 42, 32, 0.35);
-  background-color: transparent;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.18s ease;
-}
-
-.about-bio-toggle:hover {
-  background-color: rgba(200, 111, 128, 0.08);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
-
-.about-button-wrap {
-  grid-area: button;
-  margin-top: 0.6rem;
-  text-align: center;
-}
 
 .google-reviews-btn {
   display: inline-block;
@@ -696,30 +722,11 @@ background: linear-gradient(
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
 }
 
-@media (min-width: 992px) {
-  .about-card {
-    margin-top: -1.2rem;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-    grid-template-areas: "quote" "photo" "card" "button";
-    row-gap: 2rem;
-  }
-  .about-lotus-banner {
-    display: none;
-  }
-  .about-card {
-    transform: none;
-  }
-}
-
-
 /* =======================================
-   TESTIMONIALS
+   Google Reviews Button
 ======================================= */
+
+
 .testimonials-hero {
   background: linear-gradient(
     to bottom,
