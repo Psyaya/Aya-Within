@@ -191,7 +191,7 @@ section[id] {
   max-width: 46rem;
   padding: 1.1rem 1.25rem;
   border-radius: 22px;
-  background: rgba(244, 230, 209, 0.90); /* lighter inner box */
+  background: rgba(247, 225, 199, 0.90); /* lighter inner box */
   border: 1px solid rgba(183, 141, 109, 0.18);
 box-shadow:
   0 8px 24px rgba(59, 42, 32, 0.10),
@@ -364,7 +364,7 @@ box-shadow:
 }
 @media (max-width: 900px) {
   .hero-subtitle {
-    background: rgba(244, 230, 209, 0.70);
+    background: rgba(247, 225, 196, 0.62);
   }
 }
 
