@@ -244,18 +244,22 @@ box-shadow:
 
 /* Make H1 slightly larger */
 .hero-heading {
-  font-size: clamp(42px, 4.2vw, 64px);
-  line-height: 1.1;
+  font-size: clamp(38px, 3.6vw, 54px);
+  line-height: 1.15;
+  font-weight: 500;
+  color: rgba(59, 42, 32, 0.78);
 }
 
 
 /* Two-sentence subtitle: add separation + hierarchy */
 .hero-lead {
   display: block;
-  font-size: clamp(22px, 1.8vw, 28px);
-  line-height: 1.4;
-  margin-bottom: 1.05rem;   /* space between Every… and When… */
-  color: var(--browntext);
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: clamp(26px, 2.1vw, 32px);
+  line-height: 1.3;
+  font-weight: 600;
+  margin-bottom: 1.05rem;
+  color: var(--brown);
 }
 
 .hero-subline {
@@ -268,13 +272,13 @@ box-shadow:
 /* P-words: Playfair + green + clean spacing */
 .hero-pillars {
   display: block;
-  font-size: clamp(16px, 1.15vw, 18px);
+  font-size: clamp(15px, 1.05vw, 17px);
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.075em;
   text-transform: uppercase;
   margin-top: 0.95rem;
   margin-bottom: 0.9rem;
-  color: var(--green); /* now it will actually show */
+  color:rgba(110, 129, 79, 0.88);
 }
 
 /* Tagline: not italic (cleaner) */
@@ -355,7 +359,8 @@ box-shadow:
   }
 
   .hero-heading {
-    font-size: 2rem;
+    font-size: clamp(32px, 7vw, 44px);
+    line-height: 1.15;
   }
 
   .hero-subtitle {
@@ -534,7 +539,7 @@ box-shadow:
 }
 
 .offering-link:hover .offering-title-main {
-  color: rgba(59, 42, 32, 0.95);
+  color: #C86F80;
   font-weight: 600;
 }
 
@@ -595,6 +600,7 @@ box-shadow:
   font-weight: 600;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.28);
   transform: translateY(-2px);
+  background-color: #C86F80 !important;
 }
 
 .offerings-disclaimer {
@@ -622,106 +628,304 @@ box-shadow:
   }
 }
 
-
-
 /* =======================================
    ABOUT AYA
 ======================================= */
 
 .about-hero {
-background: linear-gradient(
+  background: linear-gradient(
     to bottom,
-    #F8CFDA 0%,     /* soft pink at the top */
-    #F4E6D1 35%,    /* transitions quickly */
-    #F4E6D1 100%    /* cream bottom */
-);
-  padding: 4.5rem 6vw 1rem;
-  border-top: 1px solid #B78D6D; /* tan */
+    #F8CFDA 0%,
+    #F4E6D1 34%,
+    #F4E6D1 100%
+  );
+  padding: 4.7rem 6vw 3.5rem;
+  border-top: 1px solid rgba(183, 141, 109, 0.65);
 }
 
-
 .about-hero-inner {
-  max-width: 1200px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 
-/* =======================================
-   ABOUT AYA (desktop layout)
-======================================= */
-
-.about-grid {
+.about-top-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr); /* more space for text */
-  grid-template-areas:
-    "quote card"
-    "photo card";
-  column-gap: 3rem;
-  row-gap: 1.8rem; /* slightly tighter so it fits nicer */
+  grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1.35fr);
+  gap: 3.2rem;
   align-items: start;
 }
 
+.about-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .about-quote {
-  grid-area: quote;
   margin: 0;
+  padding: 1.15rem 1.35rem;
+  background: rgba(200, 111, 128, 0.055);
+  border-left: 3px solid rgba(110, 129, 79, 0.42);
+  border-radius: 18px;
 }
 
 .about-quote-text {
-  font-family: "Playfair Display", serif;
-  font-size: 22px;
-  line-height: 1.3;
-  margin-bottom: 0.8rem;
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: clamp(1.6rem, 2.3vw, 2.15rem);
+  line-height: 1.27;
+  color: #B98790;
+  opacity: 0.88;
+  margin-bottom: 1.15rem;
 }
 
 .about-quote-author {
-  font-size: 0.95rem;
-}
-
-/* Photo: keep it visually “contained” on desktop */
-.about-photo-block {
-  grid-area: photo;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-size: 1rem;
+   color:rgba(168, 90, 100, 0.65);
 }
 
 .about-photo-wrapper {
   width: 100%;
-  max-width: 460px; /* slightly smaller so it doesn’t overpower */
-  border-radius: 24px;
+  max-width: 430px;
+  border-radius: 26px;
   overflow: hidden;
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.24);
-
-  /* KEY FIX: cap the visible height so it won’t extend below the card */
-  max-height: clamp(240px, 22vw, 340px);
+  box-shadow: 0 22px 42px rgba(59, 42, 32, 0.18);
 }
 
 .about-photo {
   width: 100%;
-  height: 100%;
   display: block;
-  object-fit: cover;         /* crop instead of expanding layout */
-  object-position: center;   /* tweak if you want: center 25% */
+  aspect-ratio: 1.26 / 1;
+  object-fit: cover;
+  object-position: center;
 }
 
-/* Card */
-.about-card {
-  grid-area: card;
-  width: 100%;
-  max-width: none;
+.about-main {
+  max-width: 690px;
 }
 
-/* Mobile stacking stays your current approach */
+.about-title {
+  font-size: clamp(3rem, 5vw, 4.55rem);
+  line-height: 1;
+  margin-bottom: 1.25rem;
+  color: var(--brown);
+}
+
+.about-main p,
+.about-statement p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--browntext);
+  margin: 0;
+}
+
+.about-divider,
+.training-divider {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 1.45rem 0;
+}
+
+.about-divider span,
+.training-divider span {
+  height: 1px;
+  background: rgba(59, 42, 32, 0.18);
+  flex: 1;
+}
+
+.about-divider img,
+.training-divider img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  opacity: 0.85;
+}
+
+.about-signature {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-style: italic;
+  font-size: clamp(1.55rem, 2.4vw, 2.1rem) !important;
+  line-height: 1.32 !important;
+  color: #A85A64 !important;
+}
+
+.about-statement-list {
+  margin-top: 1.6rem;
+}
+
+.about-statement {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 1.45rem;
+  align-items: center;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.about-icon-circle {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: rgba(255, 250, 243, 0.62);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-icon-circle img {
+  width: 43px;
+  height: 43px;
+  object-fit: contain;
+}
+
+.about-divider-wide {
+  max-width: 880px;
+  margin: 1.25rem auto;
+}
+
+.about-training-box {
+  margin-top: 2.4rem;
+  border: 1px solid rgba(59, 42, 32, 0.18);
+  border-radius: 18px;
+  background: rgba(255, 250, 243, 0.36);
+  padding: 1.55rem 2.1rem 1.85rem;
+}
+
+.about-training-box h2 {
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  line-height: 1.1;
+  margin: 0;
+  color: var(--brown);
+}
+
+.training-divider {
+  max-width: 430px;
+  margin: 0.75rem 0 1.25rem;
+}
+
+.training-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 3rem;
+  row-gap: 1.05rem;
+}
+
+.training-item {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 0.9rem;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1.35;
+  color: var(--browntext);
+}
+
+.training-item img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+/* Tablet */
 @media (max-width: 991.98px) {
-  .about-grid {
+  .about-hero {
+    padding: 4rem 5vw 3rem;
+  }
+
+  .about-top-grid {
     grid-template-columns: 1fr;
-    grid-template-areas: "quote" "photo" "card";
-    row-gap: 2rem;
+    gap: 2.2rem;
+  }
+
+  .about-left {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .about-main {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .about-title {
+    text-align: center;
   }
 
   .about-photo-wrapper {
-    max-height: none; /* let it be natural on mobile */
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .about-statement {
+    grid-template-columns: 70px minmax(0, 1fr);
+  }
+
+  .about-icon-circle {
+    width: 62px;
+    height: 62px;
+  }
+
+  .about-icon-circle img {
+    width: 36px;
+    height: 36px;
   }
 }
+
+/* Mobile */
+@media (max-width: 650px) {
+  .about-hero {
+    padding: 3.2rem 1.25rem 2.7rem;
+  }
+
+  .about-quote-text {
+    font-size: 1.55rem;
+  }
+
+  .about-title {
+    font-size: 3rem;
+  }
+
+  .about-main p,
+  .about-statement p {
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .about-signature {
+    font-size: 1.45rem !important;
+  }
+
+  .about-statement {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    text-align: left;
+  }
+
+  .about-icon-circle {
+    width: 58px;
+    height: 58px;
+  }
+
+  .about-training-box {
+    padding: 1.3rem 1.15rem 1.45rem;
+  }
+
+  .training-grid {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+  }
+
+  .training-item {
+    grid-template-columns: 38px minmax(0, 1fr);
+    font-size: 0.96rem;
+  }
+
+  .training-item img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 
 /* =======================================
    TESTIMONIALS
@@ -747,7 +951,16 @@ background: linear-gradient(
   transform: translateY(-2px);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
 }
+.testimonials-google-wrap {
+  text-align: center;
+  margin-top: 1.6rem;
+}
 
+.testimonials-google-note {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  color: rgba(59, 42, 32, 0.85);
+}
 /* =======================================
    Google Reviews Button
 ======================================= */
@@ -771,22 +984,25 @@ background: linear-gradient(
 
 .testimonials-header {
   max-width: 620px;
-  margin: 0 auto 1.9rem;
+  margin: 0 auto 1.4rem;
 }
 
 .testimonials-lotus {
-  width: 52px;
-  margin-bottom: 0.6rem;
+  width: 96px;
+  height: auto;
+  margin: -0.9rem auto 0.2rem;
+  display: block;
 }
 
 .testimonials-title {
   font-size: 2.25rem;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.2rem;
 }
 
 .testimonials-subtitle {
   font-size: 1.02rem;
   color: rgba(59, 42, 32, 0.9);
+  margin-top: 0.2rem;
 }
 
 /* Move testimonial carousel arrows further to the sides
@@ -854,7 +1070,8 @@ background: linear-gradient(
 }
 
 .testimonial-icon {
-  width: 26px;
+  width: 34px;
+  height: auto;
 }
 
 .testimonial-text {
