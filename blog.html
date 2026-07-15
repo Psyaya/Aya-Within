@@ -2,8 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Aya-Within – Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary meta -->
+  <title>Blog &amp; IFS Resources | Aya-Within</title>
+  <meta name="description" content="Reflections, gentle practices, and IFS-informed resources from Aya-Within on parts work, Self-leadership, and bringing Internal Family Systems into everyday life." />
+  <link rel="canonical" href="https://ayawithin.com/blog.html" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="author" content="Aya (Ayelet H) Fogel" />
+  <meta name="theme-color" content="#6E814F" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Aya-Within" />
+  <meta property="og:title" content="Blog &amp; IFS Resources | Aya-Within" />
+  <meta property="og:description" content="Reflections, gentle practices, and IFS-informed resources from Aya-Within on parts work, Self-leadership, and everyday IFS." />
+  <meta property="og:url" content="https://ayawithin.com/blog.html" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://ayawithin.com/images/Logo%20Pink%20Beige%20Green%20Transparent.png" />
+  <meta property="og:image:alt" content="Aya-Within lotus logo" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog &amp; IFS Resources | Aya-Within" />
+  <meta name="twitter:description" content="Reflections, gentle practices, and IFS-informed resources from Aya-Within." />
+  <meta name="twitter:image" content="https://ayawithin.com/images/Logo%20Pink%20Beige%20Green%20Transparent.png" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="images/Lotus%20Square.png" type="image/png" />
+  <link rel="apple-touch-icon" href="images/Lotus%20Square.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- Resource hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
 
   <!-- Bootstrap CSS -->
   <link
@@ -18,8 +51,6 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
   />
   <!-- Playfair Display Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap"
     rel="stylesheet"
@@ -27,6 +58,41 @@
 
   <!-- Main site styles -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": "https://ayawithin.com/blog.html#blog",
+        "url": "https://ayawithin.com/blog.html",
+        "name": "Aya-Within Blog & Resources",
+        "description": "Reflections, gentle practices, and IFS-informed resources on parts work, Self-leadership, and everyday Internal Family Systems.",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://ayawithin.com/#person" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://ayawithin.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://ayawithin.com/blog.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- ===================== NAV ====================== -->
@@ -161,6 +227,7 @@
             </div>
           </div>
           <a href="index.html#offerings">Offerings</a>
+          <a href="index.html#faq">FAQ</a>
           <a href="blog.html">Blog</a>
           <a href="index.html#contact">Contact</a>
         </nav>
@@ -193,7 +260,12 @@
                 <i class="bi bi-instagram"></i>
                 <span class="footer-social-text">Instagram</span>
               </a>
-              <a href="#" class="footer-social-link footer-social-fb">
+              <a
+                href="https://www.facebook.com/profile.php?id=61588811465014"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-social-link footer-social-fb"
+              >
                 <i class="bi bi-facebook"></i>
                 <span class="footer-social-text">Facebook</span>
               </a>
@@ -317,17 +389,6 @@
           aboutGroup.classList.remove("open");
           aboutToggle.setAttribute("aria-expanded", "false");
         }
-      });
-    }
-
-    // Facebook placeholder
-    const fbLink = document.querySelector(".footer-social-fb");
-    if (fbLink) {
-      fbLink.addEventListener("click", function (e) {
-        e.preventDefault();
-        alert(
-          "My Facebook page is still under construction. Thank you for your patience"
-        );
       });
     }
 

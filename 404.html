@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page Not Found | Aya-Within</title>
+  <meta name="robots" content="noindex, follow" />
+  <meta name="theme-color" content="#6E814F" />
+
+  <link rel="icon" href="images/Lotus%20Square.png" type="image/png" />
+  <link rel="apple-touch-icon" href="images/Lotus%20Square.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .notfound {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 6vw;
+      background-color: var(--cream, #F4E6D1);
+    }
+    .notfound-card {
+      max-width: 560px;
+    }
+    .notfound-lotus {
+      width: 70px;
+      height: auto;
+      margin-bottom: 1.25rem;
+    }
+    .notfound h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.2rem, 5vw, 3rem);
+      color: var(--brown, #3B2A20);
+      margin-bottom: 0.75rem;
+    }
+    .notfound p {
+      color: var(--browntext, #3B2A20);
+      line-height: 1.7;
+      margin-bottom: 1.75rem;
+    }
+    .notfound .btn {
+      display: inline-block;
+      background: var(--green, #6E814F);
+      color: #fff;
+      padding: 0.8rem 1.6rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .notfound .btn:hover {
+      background: var(--darkgreen, #3C5030);
+    }
+  </style>
+</head>
+<body>
+  <main class="notfound">
+    <div class="notfound-card">
+      <img src="images/lotus-logoT.png" alt="Aya-Within lotus" class="notfound-lotus" />
+      <h1>This path has drifted off course</h1>
+      <p>
+        The page you were looking for isn&rsquo;t here. Let&rsquo;s gently guide you
+        back to a place to begin.
+      </p>
+      <a class="btn" href="/">Return Home</a>
+    </div>
+  </main>
+</body>
+</html>
