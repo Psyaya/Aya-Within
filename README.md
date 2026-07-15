@@ -20,6 +20,9 @@ style.css           # All site styles (~1,900 lines; Bootstrap-assisted)
 robots.txt          # Crawl directives + sitemap pointer (welcomes AI crawlers)
 sitemap.xml         # XML sitemap
 site.webmanifest    # PWA/basic web app manifest
+analytics-config.js # Public analytics IDs/keys you edit (GA4, Clarity, verification)
+analytics.js        # Loader: GA4 + Microsoft Clarity + verification + event tracking
+ANALYTICS.md        # How to set up and use analytics/verification
 CNAME               # ayawithin.com
 images/             # Logos, icons, photos
 ```
@@ -111,7 +114,7 @@ All changes are in-code and validated (0 editor errors; all JSON-LD, the manifes
 These require the owner's accounts, content, or a business decision — they were **not** implemented.
 
 ### High priority
-1. **Analytics + Search Console.** Add GA4 (or Plausible/Fathom), verify the domain in Google Search Console and Bing Webmaster Tools, and submit `sitemap.xml`. You currently have zero traffic/keyword visibility.
+1. **Analytics + Search Console.** A config-driven analytics system is now wired in (GA4, Microsoft Clarity, Google/Bing verification, and conversion event tracking) — just add your IDs in [analytics-config.js](analytics-config.js). See [ANALYTICS.md](ANALYTICS.md) for setup. Then verify the domain in Google Search Console and Bing Webmaster Tools and submit `sitemap.xml`.
 2. **Publish real blog content.** 4–6 answer-first posts (e.g. *"What is a 'part' in IFS?"*, *"IFS vs. talk therapy"*, *"A simple parts check-in"*) with `BlogPosting` schema. This is the biggest untapped organic + AI-search asset.
 3. **Google Business Profile.** Create one as a *service-area* business (virtual). Do **not** invent a physical address.
 
